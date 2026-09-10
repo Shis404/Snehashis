@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snehashis Samanta | Musician, Coder, Athlete & JEE Aspirant</title>
+  
+  <!-- Google Fonts & Tailwind CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              purple: '#8B5CF6',
+              cyan: '#06B6D4',
+              pink: '#EC4899',
+              amber: '#F59E0B',
+              emerald: '#10B981',
+            }
+          },
+          animation: {
+            'float-slow': 'float 8s ease-in-out infinite',
+            'float-reverse': 'floatRev 9s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
+            'spin-slow': 'spin 18s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-14px) rotate(2deg)' },
+            },
+            floatRev: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(14px) rotate(-2deg)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+              '50%': { opacity: '0.8', transform: 'scale(1.08)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Frosted Glass Pattern Utilities */
+    .glass-panel {
+      background: rgba(18, 24, 38, 0.65);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 16px 36px 0 rgba(0, 0, 0, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .glass-panel-subtle {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+
+    .glass-icon-box {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.03) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.35), inset 0 2px 2px rgba(255, 255, 255, 0.35);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-icon-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.22) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .glass-icon-box:hover::before {
+      opacity: 1;
+    }
+
+    .glass-icon-box:hover {
+      transform: translateY(-4px) scale(1.04);
+      border-color: rgba(255, 255, 255, 0.45);
+      box-shadow: 0 14px 28px -2px rgba(139, 92, 246, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+    }
+
+    /* Subtle grid pattern background */
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0f19;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(139, 92, 246, 0.5);
+    }
+  </style>
+</head>
+
+<body class="bg-[#070a12] text-slate-100 font-sans antialiased relative min-h-screen selection:bg-purple-500 selection:text-white bg-grid-pattern overflow-x-hidden">
+
+  <!-- Ambient Light Orbs in Background -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div class="absolute -top-32 -left-28 w-96 h-96 bg-purple-600/25 rounded-full blur-[110px] animate-pulse-glow"></div>
+    <div class="absolute top-1/3 -right-32 w-[28rem] h-[28rem] bg-cyan-500/20 rounded-full blur-[125px] animate-float-slow"></div>
+    <div class="absolute bottom-20 left-1/4 w-[32rem] h-[32rem] bg-pink-600/15 rounded-full blur-[140px] animate-float-reverse"></div>
+  </div>
+
+  <!-- Top Navigation Header -->
+  <header class="fixed top-4 left-0 right-0 z-50 px-4">
+    <div class="max-w-6xl mx-auto">
+      <nav class="glass-panel px-5 py-3.5 rounded-2xl flex items-center justify-between shadow-2xl transition-all">
+        <!-- Logo & Status -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl glass-icon-box flex items-center justify-center text-purple-300 font-bold text-lg group-hover:text-white group-hover:border-purple-400">
+            SS
+          </div>
+          <div>
+            <span class="font-bold tracking-tight text-white group-hover:text-purple-300 transition-colors text-base block leading-tight">
+              Snehashis Samanta
+            </span>
+            <span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping inline-block"></span>
+              Available for Collaborations
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <div class="hidden md:flex items-center gap-1.5 text-sm font-medium text-slate-300">
+          <a href="#about" class="px-3.5 py-1.5 rounded-lg hover:text-white hover:bg-white/10 transition-all">Profile</a>
+          <a href="#music" class="px-3.5 py-1.5 rounded-lg hover:text-white hover:bg-white/10 transition-all">Music Lab</a>
+          <a href="#tech" class="px-3.5 py-1.5 rounded-lg hover:text-white hover:bg-white/10 transition-all">Tech & AI</a>
+          <a href="#sports" class="px-3.5 py-1.5 rounded-lg hover:text-white hover:bg-white/10 transition-all">Athletics</a>
+          <a href="#academics" class="px-3.5 py-1.5 rounded-lg hover:text-white hover:bg-white/10 transition-all">JEE / PCM</a>
+        </div>
+
+        <!-- Intellect & CTA Badges -->
+        <div class="flex items-center gap-2">
+          <!-- Glass Status Badge: High IQ Intellect -->
+          <div class="glass-panel-subtle px-3 py-1.5 rounded-full border border-purple-400/40 flex items-center gap-1.5 text-xs text-purple-200 font-semibold shadow-inner">
+            <span class="text-sm">🧠</span>
+            <span class="font-mono tracking-wide">High IQ Mind</span>
+          </div>
+
+          <!-- Interactive Synth Chime Button -->
+          <button id="synthChimeBtn" title="Play Chime" class="glass-icon-box p-2.5 rounded-xl text-purple-300 hover:text-white cursor-pointer hidden sm:flex items-center justify-center">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+            </svg>
+          </button>
+
+          <!-- Contact Modal Trigger -->
+          <button onclick="openModal()" class="glass-icon-box px-3.5 py-1.5 rounded-xl bg-purple-600/30 hover:bg-purple-600/50 text-white font-semibold text-xs transition-all shadow-md">
+            Contact
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="relative z-10 pt-28 pb-16 px-4 md:px-8 max-w-6xl mx-auto">
+    <section id="hero" class="pt-8 pb-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left Hero Details -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel-subtle border border-purple-400/30 text-xs font-mono text-purple-300">
+            <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+            Polymath • Musician • Engineer in the Making
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
+            Hi, I'm <br/>
+            <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-300 bg-clip-text text-transparent">
+              Snehashis Samanta
+            </span>
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
+            Bridging raw sonic expression, computational intelligence, and athletic grit. A multi-instrumentalist with <strong class="text-purple-300 font-semibold">12 years in music</strong>, building full-stack applications with deep AI pipelines, competing on handball and football fields, and cracking the code as a rigorous <strong class="text-cyan-300 font-semibold">PCM & JEE Aspirant</strong>.
+          </p>
+
+          <!-- Core Glass Pills Badges Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <!-- Glass Badge 1: Music -->
+            <div class="glass-icon-box p-3 rounded-2xl flex flex-col items-center text-center gap-1">
+              <div class="w-8 h-8 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12 0c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                </svg>
+              </div>
+              <span class="text-xs font-bold text-white">12 Yrs</span>
+              <span class="text-[10px] text-slate-400">Music Core</span>
+            </div>
+
+            <!-- Glass Badge 2: Tech & AI -->
+            <div class="glass-icon-box p-3 rounded-2xl flex flex-col items-center text-center gap-1">
+              <div class="w-8 h-8 rounded-xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                </svg>
+              </div>
+              <span class="text-xs font-bold text-white">Dev + AI</span>
+              <span class="text-[10px] text-slate-400">Web & Mobile</span>
+            </div>
+
+            <!-- Glass Badge 3: Sports -->
+            <div class="glass-icon-box p-3 rounded-2xl flex flex-col items-center text-center gap-1">
+              <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9" stroke-width="2"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3a9 9 0 000 18M3 12h18"/>
+                </svg>
+              </div>
+              <span class="text-xs font-bold text-white">Zonals</span>
+              <span class="text-[10px] text-slate-400">Handball & FB</span>
+            </div>
+
+            <!-- Glass Badge 4: Academics -->
+            <div class="glass-icon-box p-3 rounded-2xl flex flex-col items-center text-center gap-1">
+              <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                </svg>
+              </div>
+              <span class="text-xs font-bold text-white">PCM Student</span>
+              <span class="text-[10px] text-slate-400">JEE Aspirant</span>
+            </div>
+          </div>
+
+          <!-- Hero CTAs -->
+          <div class="flex flex-wrap items-center gap-3 pt-4">
+            <a href="#music" class="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all flex items-center gap-2">
+              <span>Explore Sound Lab</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+            <a href="#tech" class="px-6 py-3 rounded-xl glass-panel-subtle hover:bg-white/10 text-slate-200 font-semibold text-sm border border-white/20 transition-all">
+              Inspect Tech & AI Work
+            </a>
+            <a href="#academics" class="px-4 py-3 rounded-xl glass-icon-box text-xs font-mono text-cyan-300 flex items-center gap-1.5">
+              <span>⚡ JEE Mode</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Identity Display -->
+        <div class="lg:col-span-5 relative">
+          <div class="glass-panel p-6 sm:p-7 rounded-3xl relative overflow-hidden border border-white/20 shadow-2xl">
+            
+            <!-- Glass Pattern Watermark / Shimmer -->
+            <div class="absolute -right-12 -top-12 w-48 h-48 bg-purple-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+            <!-- Profile Header -->
+            <div class="flex items-center justify-between border-b border-white/10 pb-5">
+              <div class="flex items-center gap-4">
+                <div class="relative">
+                  <!-- Translucent Portrait Placeholder with Glow -->
+                  <div class="w-16 h-16 rounded-2xl glass-icon-box flex items-center justify-center text-3xl font-extrabold bg-gradient-to-br from-purple-500/40 via-pink-500/20 to-cyan-400/30 border border-white/30 text-white shadow-inner">
+                    🎸
+                  </div>
+                  <span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-purple-600 border-2 border-[#0f1422] flex items-center justify-center text-[10px]" title="Cognitive Profile: High IQ">
+                    🧠
+                  </span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-white">Snehashis Samanta</h3>
+                  <p class="text-xs text-slate-400 font-mono">Bengal, India • JEE '27/'28 Batch</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-mono bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                ACTIVE
+              </span>
+            </div>
+
+            <!-- Key Highlights Breakdown -->
+            <div class="py-5 space-y-3.5 text-sm">
+              <div class="flex items-center justify-between p-2.5 rounded-xl glass-panel-subtle">
+                <span class="text-slate-400 text-xs flex items-center gap-2">
+                  <span class="text-base">🎵</span> Music & Instrumentals
+                </span>
+                <span class="text-white font-medium text-xs font-mono">12 Yrs • Guitar & Keys</span>
+              </div>
+
+              <div class="flex items-center justify-between p-2.5 rounded-xl glass-panel-subtle">
+                <span class="text-slate-400 text-xs flex items-center gap-2">
+                  <span class="text-base">💻</span> Dev & Detailed AI
+                </span>
+                <span class="text-cyan-300 font-medium text-xs font-mono">Web, Apps & LLM Ops</span>
+              </div>
+
+              <div class="flex items-center justify-between p-2.5 rounded-xl glass-panel-subtle">
+                <span class="text-slate-400 text-xs flex items-center gap-2">
+                  <span class="text-base">⚽</span> Sports Discipline
+                </span>
+                <span class="text-amber-300 font-medium text-xs font-mono">Zonals Handball & FB</span>
+              </div>
+
+              <div class="flex items-center justify-between p-2.5 rounded-xl glass-panel-subtle">
+                <span class="text-slate-400 text-xs flex items-center gap-2">
+                  <span class="text-base">📚</span> Current Academic Sprint
+                </span>
+                <span class="text-emerald-300 font-medium text-xs font-mono">PCM + JEE Aspirant</span>
+              </div>
+            </div>
+
+            <!-- Interactive Quick Strum Test -->
+            <div class="pt-2 border-t border-white/10">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                  Quick Acoustic Tone Preview
+                </span>
+                <span class="text-[10px] font-mono text-slate-400">Click to preview note</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1.5">
+                <button onclick="playGuitarChord('C')" class="glass-icon-box py-2 text-center rounded-xl text-xs font-bold text-purple-200 hover:text-white transition">C Maj</button>
+                <button onclick="playGuitarChord('G')" class="glass-icon-box py-2 text-center rounded-xl text-xs font-bold text-cyan-200 hover:text-white transition">G Maj</button>
+                <button onclick="playGuitarChord('Am')" class="glass-icon-box py-2 text-center rounded-xl text-xs font-bold text-pink-200 hover:text-white transition">A min</button>
+                <button onclick="playGuitarChord('F')" class="glass-icon-box py-2 text-center rounded-xl text-xs font-bold text-amber-200 hover:text-white transition">F Maj</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: Music Experience Lab -->
+    <section id="music" class="py-16 scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel-subtle text-xs font-mono text-purple-300 border border-purple-500/20">
+          <span>🎸</span> SONIC ARCHITECTURE
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+          12 Years of Musical Mastery
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          From acoustic fingerstyle & electric leads to harmonic keyboards and digital audio workstation production.
+        </p>
+      </div>
+
+      <!-- Music Breakdown Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <!-- Card 1: Total Music -->
+        <div class="glass-panel p-6 rounded-3xl relative group hover:border-purple-500/50 transition-all">
+          <div class="glass-icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-purple-300 mb-5">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12 0c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+            </svg>
+          </div>
+          <div class="text-3xl font-extrabold text-white mb-1">12 Years</div>
+          <h3 class="text-base font-semibold text-purple-300 mb-2">Music Experience</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Deep ear training, rhythm science, Indian and Western scale theory, arrangement composition, and stage presence.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-slate-400">
+            <span>Specialty</span>
+            <span class="text-purple-300">Arrangement & Harmony</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Guitar Experience -->
+        <div class="glass-panel p-6 rounded-3xl relative group hover:border-pink-500/50 transition-all">
+          <div class="glass-icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-pink-300 mb-5">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div class="text-3xl font-extrabold text-white mb-1">11 Years</div>
+          <h3 class="text-base font-semibold text-pink-300 mb-2">Guitar Journey</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Acoustic fingerstyle, electric distortion shredding, complex chord progressions, percussive tapping, and emotive soloing.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-slate-400">
+            <span>Primary Axe</span>
+            <span class="text-pink-300">Acoustic & Electric</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Keyboard Experience -->
+        <div class="glass-panel p-6 rounded-3xl relative group hover:border-cyan-500/50 transition-all">
+          <div class="glass-icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-cyan-300 mb-5">
+            <!-- Piano Keys SVG -->
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M6 4v9a1 1 0 001 1h1a1 1 0 001-1V4M14 4v9a1 1 0 001 1h1a1 1 0 001-1V4" />
+            </svg>
+          </div>
+          <div class="text-3xl font-extrabold text-white mb-1">6 Years</div>
+          <h3 class="text-base font-semibold text-cyan-300 mb-2">Keyboard & Piano</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Polyphonic voicings, synthesizer pads, bass arpeggios, melodic counterpoints, and dual-hand dexterity.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-slate-400">
+            <span>Focus</span>
+            <span class="text-cyan-300">Harmonics & Synths</span>
+          </div>
+        </div>
+
+        <!-- Card 4: DAW Experience -->
+        <div class="glass-panel p-6 rounded-3xl relative group hover:border-amber-500/50 transition-all">
+          <div class="glass-icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-amber-300 mb-5">
+            <!-- Waveform SVG -->
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h3l3 8 4-16 3 10h5"/>
+            </svg>
+          </div>
+          <div class="text-3xl font-extrabold text-white mb-1">2 Years</div>
+          <h3 class="text-base font-semibold text-amber-300 mb-2">DAW & Production</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Multi-track recording, EQ shaping, dynamic compression, sidechain mixing, VST automation, and mastering polished tracks.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-slate-400">
+            <span>Workflows</span>
+            <span class="text-amber-300">Mixing & Mastering</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Interactive Web Audio Glass Synthesizer Playground -->
+      <div class="mt-10 glass-panel p-6 sm:p-8 rounded-3xl border border-white/15">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 border-b border-white/10 gap-4">
+          <div>
+            <h4 class="text-lg font-bold text-white flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+              Live Glass Piano & Synthesizer Console
+            </h4>
+            <p class="text-xs text-slate-400 mt-1">
+              Engineered with the Web Audio API. Click the glass keys to test harmonies live right in your browser!
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-mono text-slate-400">Waveform:</span>
+            <select id="synthWaveform" class="bg-[#131929] border border-white/20 text-slate-200 text-xs rounded-xl px-3 py-1.5 focus:outline-none focus:border-purple-400">
+              <option value="sine">Pure Sine</option>
+              <option value="triangle" selected>Warm Triangle</option>
+              <option value="sawtooth">Bright Sawtooth</option>
+              <option value="square">8-Bit Square</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Synthesizer Keys Array -->
+        <div class="pt-6">
+          <div class="flex justify-center items-stretch gap-1.5 sm:gap-2 select-none overflow-x-auto pb-2">
+            <!-- C4 -->
+            <button onclick="playSynthNote(261.63, 'C4')" class="glass-icon-box w-11 sm:w-14 h-36 sm:h-44 rounded-b-2xl rounded-t-lg flex flex-col justify-end p-2 text-center text-xs font-mono font-bold text-white hover:bg-purple-600/30 transition active:scale-95 active:bg-purple-600/60">
+              <span class="text-[10px] text-slate-400">C4</span>
+              <span>Do</span>
+            </button>
+            <!-- D4 -->
+            <button onclick="playSynthNote(293.66, 'D4')" class="glass-icon-box w-11 sm:w-14 h-36 sm:h-44 rounded-b-2xl rounded-t-lg flex flex-col justify-end p-2 text-center text-xs font-mono font-bold text-white hover:bg-purple-600/30 transition active:scale-95 active:bg-purple-600/60">
+              <span class="text-[10px] text-slate-400">D4</span>
+              <span>Re</span>
+            </button>
+            <!-- E4 -->
+            <button onclick="playSynthNote(329.63, 'E4')" class="glass-icon-box w-11 sm:w-14 h-36 sm:h-44 rounded-b-2xl rounded-t-lg flex flex-col justify-end p-2 text-center text-xs font-mono font-bold text-white hover:bg-purple-600/30 transition active:scale-95 active:bg-purple-600/60">
+              <span class="text-[10px] text-slate-400">E4</span>
+              <span>Mi</span>
+            </button>
+            <!-- F4 -->
+            <button onclick="playSynthNote(349.23, 'F4')" class="glass-icon-box w-11 sm:w-14 h-36 sm:h-44 rounded-b-2xl rounded-t-lg flex flex-col justify-end p-2 text-center text-xs font-mono font-bold text-white hover:bg-cyan-600/30 transition active:scale-95 active:bg-cyan-600/60">
+              <span class="text-[10px] text-slate-400">F4</span>
+              <span>Fa</span>
+            </button>
+            <!-- G4 -->
+            <button onclick="playSynthNote(392.00, 'G4')" class="glass-icon-box w-11 sm:w-14 h-36 sm:h-44 rounded-b-2xl rounded-t-lg flex flex-col justify-end p-2 text-center text-xs font-mono font-bold text-white hover:bg-cyan-600/30 transition active:scale-95 active:bg-cyan-600/60">
+              <span class="text-[10px] text-slate-400">G4</span>
+              <span>Sol</span>
+            </button>
+            <!-- A4 -->
+            <button onclick="playSynthNote(440.00, 'A4')" class="glass-icon-box w-11 sm:w-14 h-36 sm:h-44 rounded-b-2xl rounded-t-lg flex flex-col justify-end p-2 text-center text-xs font-mono font-bold text-white hover:bg-pink-600/30 transition active:scale-95 active:bg-pink-600/60">
+              <span class="text-[10px] text-slate-400">A4</span>
+              <span>La</span>
+            </button>
+            <!-- B4 -->
+            <button onclick="playSynthNote(493.88, 'B4')" class="glass-icon-box w-11 sm:w-14 h-36 sm:h-44 rounded-b-2xl rounded-t-lg flex flex-col justify-end p-2 text-center text-xs font-mono font-bold text-white hover:bg-pink-600/30 transition active:scale-95 active:bg-pink-600/60">
+              <span class="text-[10px] text-slate-400">B4</span>
+              <span>Ti</span>
+            </button>
+            <!-- C5 -->
+            <button onclick="playSynthNote(523.25, 'C5')" class="glass-icon-box w-11 sm:w-14 h-36 sm:h-44 rounded-b-2xl rounded-t-lg flex flex-col justify-end p-2 text-center text-xs font-mono font-bold text-white hover:bg-emerald-600/30 transition active:scale-95 active:bg-emerald-600/60">
+              <span class="text-[10px] text-slate-400">C5</span>
+              <span>Do</span>
+            </button>
+          </div>
+          
+          <div class="text-center mt-3">
+            <span id="activeNoteDisplay" class="text-xs font-mono text-purple-300">Ready to play - Click any key above</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Tech & Detailed AI Capabilities -->
+    <section id="tech" class="py-16 scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel-subtle text-xs font-mono text-cyan-300 border border-cyan-500/20">
+          <span>💻</span> CODE & INTELLIGENCE
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+          Software Craft & Detailed AI Integration
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          From full-stack responsive web experiences to building mobile applications and deploying state-of-the-art AI workflows.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left Column: Web & Mobile Development -->
+        <div class="lg:col-span-6 glass-panel p-6 sm:p-8 rounded-3xl space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="glass-icon-box w-12 h-12 rounded-2xl flex items-center justify-center text-cyan-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">Full-Stack Websites & Apps</h3>
+              <p class="text-xs text-slate-400">Architecting modern responsive digital products</p>
+            </div>
+          </div>
+
+          <p class="text-sm text-slate-300 leading-relaxed">
+            I craft clean, fast, and accessible user interfaces paired with robust backend logic. My experience ranges from modern interactive Single Page Applications to cross-platform mobile app prototypes.
+          </p>
+
+          <!-- Glass Skill Pills -->
+          <div class="space-y-3">
+            <h4 class="text-xs font-mono text-slate-400 uppercase tracking-wider">Engineering Disciplines</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="glass-icon-box px-3 py-1.5 rounded-xl text-xs font-medium text-cyan-200">Frontend (HTML5, Tailwind, JS/TS, React)</span>
+              <span class="glass-icon-box px-3 py-1.5 rounded-xl text-xs font-medium text-purple-200">Mobile UI & Hybrid App Architectures</span>
+              <span class="glass-icon-box px-3 py-1.5 rounded-xl text-xs font-medium text-pink-200">Web Audio API & Interactive Canvas</span>
+              <span class="glass-icon-box px-3 py-1.5 rounded-xl text-xs font-medium text-emerald-200">API Design & Modern Cloud Deployment</span>
+            </div>
+          </div>
+
+          <!-- Code Preview Box -->
+          <div class="glass-panel-subtle p-4 rounded-2xl border border-white/10 font-mono text-xs text-slate-300 space-y-1">
+            <div class="flex items-center justify-between text-slate-500 pb-2 border-b border-white/5">
+              <span>snehashis-core.ts</span>
+              <span class="text-[10px]">TypeScript</span>
+            </div>
+            <p><span class="text-purple-400">const</span> developer = {</p>
+            <p class="pl-4">name: <span class="text-cyan-300">'Snehashis Samanta'</span>,</p>
+            <p class="pl-4">craft: [<span class="text-amber-300">'WebApps'</span>, <span class="text-amber-300">'Mobile'</span>, <span class="text-amber-300">'AI Orchestration'</span>],</p>
+            <p class="pl-4">execution: <span class="text-pink-400">'Pixel-Perfect & High-Performance'</span></p>
+            <p>};</p>
+          </div>
+        </div>
+
+        <!-- Right Column: Detailed AI Utilization -->
+        <div class="lg:col-span-6 glass-panel p-6 sm:p-8 rounded-3xl space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="glass-icon-box w-12 h-12 rounded-2xl flex items-center justify-center text-purple-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">AI Detailed Power-User</h3>
+              <p class="text-xs text-slate-400">Deep prompting, workflow automation & multimodal engineering</p>
+            </div>
+          </div>
+
+          <p class="text-sm text-slate-300 leading-relaxed">
+            I don't just ask simple questions; I use AI in a <strong class="text-purple-300 font-semibold">deeply detailed and systematic manner</strong>. From chain-of-thought prompting and automated pipelines to code architecture generation and multi-modal creative production.
+          </p>
+
+          <!-- Interactive AI Demo Terminal Box -->
+          <div class="glass-panel-subtle p-4 rounded-2xl border border-white/10 space-y-3">
+            <div class="flex items-center justify-between text-xs text-purple-300 font-mono">
+              <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-purple-400 animate-ping"></span>
+                Interactive AI Flow Simulator
+              </span>
+              <span class="text-[10px] text-slate-400">Snehashis AI Suite</span>
+            </div>
+
+            <div class="flex gap-2">
+              <input type="text" id="aiQueryInput" value="Explain how harmonic frequencies link to physics waves" class="w-full bg-[#111624] border border-white/20 text-xs rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-purple-400 font-mono" />
+              <button onclick="runAiSimulation()" class="glass-icon-box px-3 py-2 rounded-xl text-xs font-mono text-purple-300 hover:text-white font-bold whitespace-nowrap">
+                Run AI
+              </button>
+            </div>
+
+            <!-- Output Box -->
+            <div id="aiConsoleOutput" class="bg-[#0b0e18] p-3 rounded-xl font-mono text-xs text-slate-300 border border-white/5 min-h-[70px]">
+              <span class="text-slate-500">// AI System Prompt: Deep reasoning initialized...</span>
+              <p class="text-emerald-400 mt-1">✓ Standing waves on a string: f_n = n * (v / 2L). Links Snehashis's 11-year guitar harmonics directly to JEE wave physics!</p>
+            </div>
+          </div>
+
+          <!-- Feature tags -->
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div class="glass-icon-box p-2.5 rounded-xl text-slate-300 flex items-center gap-2">
+              <span class="text-purple-400">⚡</span> Detailed Chain-of-Thought
+            </div>
+            <div class="glass-icon-box p-2.5 rounded-xl text-slate-300 flex items-center gap-2">
+              <span class="text-cyan-400">🤖</span> Autonomous Workflows
+            </div>
+            <div class="glass-icon-box p-2.5 rounded-xl text-slate-300 flex items-center gap-2">
+              <span class="text-pink-400">🧠</span> Context Memory Tuning
+            </div>
+            <div class="glass-icon-box p-2.5 rounded-xl text-slate-300 flex items-center gap-2">
+              <span class="text-amber-400">🚀</span> Rapid MVP Prototyping
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: Athletics & Sports (Zonals Handball & Football) -->
+    <section id="sports" class="py-16 scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel-subtle text-xs font-mono text-amber-300 border border-amber-500/20">
+          <span>🏆</span> ATHLETIC DISCIPLINE
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+          On The Court & On The Pitch
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Physical resilience and high-velocity tactical reflexes: competing at the Zonal level in handball and driving plays in football.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Sports Card 1: Zonals Handball -->
+        <div class="glass-panel p-7 rounded-3xl relative overflow-hidden group hover:border-amber-500/50 transition-all">
+          <div class="flex items-start justify-between mb-6">
+            <div class="glass-icon-box w-16 h-16 rounded-2xl flex items-center justify-center text-amber-400 text-2xl">
+              🤾
+            </div>
+            <span class="glass-icon-box px-3 py-1.5 rounded-full text-xs font-mono text-amber-300 font-bold border border-amber-400/30">
+              ZONALS REPRESENTATIVE
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-bold text-white mb-2">Zonals Handball Player</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            Handball requires intense agility, jump shot explosive power, fast breaks, and strategic zonal defense. Selected to represent and compete at the prestigious <strong>Zonals tournament level</strong>.
+          </p>
+
+          <!-- Key Athletic Stats -->
+          <div class="space-y-3 pt-4 border-t border-white/10">
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-400">Court Velocity & Transition</span>
+                <span class="text-amber-400">95%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden p-0.5">
+                <div class="bg-gradient-to-r from-amber-500 to-yellow-300 h-full rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-400">Shot Precision & Jump Arc</span>
+                <span class="text-amber-400">92%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden p-0.5">
+                <div class="bg-gradient-to-r from-amber-500 to-yellow-300 h-full rounded-full" style="width: 92%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-400">Zonal Defense Positioning</span>
+                <span class="text-amber-400">96%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden p-0.5">
+                <div class="bg-gradient-to-r from-amber-500 to-yellow-300 h-full rounded-full" style="width: 96%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sports Card 2: Football Player -->
+        <div class="glass-panel p-7 rounded-3xl relative overflow-hidden group hover:border-emerald-500/50 transition-all">
+          <div class="flex items-start justify-between mb-6">
+            <div class="glass-icon-box w-16 h-16 rounded-2xl flex items-center justify-center text-emerald-400 text-2xl">
+              ⚽
+            </div>
+            <span class="glass-icon-box px-3 py-1.5 rounded-full text-xs font-mono text-emerald-300 font-bold border border-emerald-400/30">
+              PITCH TACTICIAN
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-bold text-white mb-2">Football Player</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            Thriving in competitive 90-minute matches. Demonstrating relentless box-to-box stamina, pinpoint passing vision, tactical pressing, and leadership under high-pressure scenarios.
+          </p>
+
+          <!-- Key Football Stats -->
+          <div class="space-y-3 pt-4 border-t border-white/10">
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-400">Endurance & Match Stamina</span>
+                <span class="text-emerald-400">94%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden p-0.5">
+                <div class="bg-gradient-to-r from-emerald-500 to-cyan-400 h-full rounded-full" style="width: 94%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-400">Ball Control & Passing Vision</span>
+                <span class="text-emerald-400">90%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden p-0.5">
+                <div class="bg-gradient-to-r from-emerald-500 to-cyan-400 h-full rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-400">Tactical Pressing & Team Spirit</span>
+                <span class="text-emerald-400">95%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden p-0.5">
+                <div class="bg-gradient-to-r from-emerald-500 to-cyan-400 h-full rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Interactive Football Penalty & Free-Kick Arena -->
+      <div class="mt-8 glass-panel p-6 sm:p-8 rounded-3xl border border-emerald-500/25 relative overflow-hidden shadow-2xl">
+        
+        <!-- Header & Live Scoreboard -->
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between pb-6 border-b border-white/10 gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <h4 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                Snehashis Matchday Arena: Interactive Free-Kick & Penalty Simulator
+              </h4>
+            </div>
+            <p class="text-xs text-slate-400">
+              Drag & flick the ball towards the net, or select signature skill shots to beat the diving AI Goalkeeper!
+            </p>
+          </div>
+
+          <!-- Scoreboard Badges -->
+          <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+            <div class="glass-icon-box px-3 py-1.5 rounded-xl border border-emerald-500/30 text-emerald-300">
+              Goals: <strong id="fbScoreDisplay" class="text-white">0 / 0</strong>
+            </div>
+            <div class="glass-icon-box px-3 py-1.5 rounded-xl border border-cyan-500/30 text-cyan-300">
+              Velocity: <strong id="fbSpeedDisplay" class="text-white">0 km/h</strong>
+            </div>
+            <div class="glass-icon-box px-3 py-1.5 rounded-xl border border-amber-500/30 text-amber-300">
+              Streak: <strong id="fbStreakDisplay" class="text-white">🔥 0</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Canvas Game Court -->
+        <div class="relative w-full mt-6 rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-[#061019] via-[#081a1a] to-[#04120f] select-none shadow-inner">
+          <canvas id="footballCanvas" class="w-full block cursor-crosshair touch-none" height="380"></canvas>
+
+          <!-- Dynamic In-Game Toast Banner -->
+          <div id="fbFeedbackOverlay" class="absolute top-4 left-1/2 -translate-x-1/2 pointer-events-none opacity-0 transition-all duration-300 transform -translate-y-3 px-4 py-1.5 rounded-full glass-panel text-xs font-mono font-bold tracking-wide flex items-center gap-2 shadow-lg">
+            <span id="fbFeedbackEmoji">⚽</span>
+            <span id="fbFeedbackText" class="text-white">GOAL!</span>
+          </div>
+
+          <!-- Bottom Canvas Instructions Prompt -->
+          <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between pointer-events-none text-[11px] font-mono text-slate-300/80">
+            <span class="bg-black/50 px-2.5 py-1 rounded-lg backdrop-blur-md">
+              🖱️ Drag ball & release to shoot | 📱 Swipe on mobile
+            </span>
+            <span id="fbTargetStatus" class="bg-emerald-950/70 border border-emerald-400/30 text-emerald-300 px-2.5 py-1 rounded-lg backdrop-blur-md hidden sm:inline-block">
+              Keeper Standing Ground
+            </span>
+          </div>
+        </div>
+
+        <!-- Signature Skill Shot Controls -->
+        <div class="pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+            <span class="text-xs font-mono text-slate-400 mr-1 block sm:inline">Signature Shots:</span>
+            
+            <button onclick="triggerSkillShot('topBins')" class="glass-icon-box px-3.5 py-2 rounded-xl text-xs font-semibold text-emerald-200 hover:text-white hover:border-emerald-400 transition flex items-center gap-1.5">
+              <span>🎯</span> Top Bins
+            </button>
+            <button onclick="triggerSkillShot('curve')" class="glass-icon-box px-3.5 py-2 rounded-xl text-xs font-semibold text-cyan-200 hover:text-white hover:border-cyan-400 transition flex items-center gap-1.5">
+              <span>🌀</span> Trivela Curve
+            </button>
+            <button onclick="triggerSkillShot('drill')" class="glass-icon-box px-3.5 py-2 rounded-xl text-xs font-semibold text-amber-200 hover:text-white hover:border-amber-400 transition flex items-center gap-1.5">
+              <span>⚡</span> 110 km/h Drill
+            </button>
+            <button onclick="triggerSkillShot('panenka')" class="glass-icon-box px-3.5 py-2 rounded-xl text-xs font-semibold text-pink-200 hover:text-white hover:border-pink-400 transition flex items-center gap-1.5">
+              <span>🪄</span> Panenka Chip
+            </button>
+          </div>
+
+          <!-- Reset & Audio Control Button -->
+          <div class="flex items-center gap-2 self-end sm:self-auto">
+            <button onclick="resetFootballGame()" class="glass-panel-subtle px-3.5 py-2 rounded-xl text-xs font-mono text-slate-300 hover:text-white transition flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              <span>Reset Stats</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: Personal & Lifestyle (Relationship & Philosophy) -->
+    <section id="about" class="py-12 scroll-mt-24">
+      <div class="glass-panel p-8 sm:p-10 rounded-3xl relative overflow-hidden border border-pink-500/20 shadow-2xl">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          
+          <div class="md:col-span-8 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel-subtle text-xs font-mono text-pink-300 border border-pink-500/30">
+              <span>💖</span> LIFESTYLE & IDENTITY
+            </div>
+            
+            <h3 class="text-3xl font-extrabold text-white">
+              The Mind Behind The Instruments & Code
+            </h3>
+            
+            <p class="text-slate-300 text-sm leading-relaxed">
+              I believe in holistic intensity: whether holding a guitar pick for 11 years, scoring from the wing on the handball court, diving deep into JEE derivations, or tuning neural network prompts. I keep life balanced, passionate, and focused.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <!-- High IQ Intellect Badge -->
+              <div class="glass-icon-box px-4 py-2 rounded-2xl flex items-center gap-2 border border-purple-400/40 text-purple-200 font-semibold text-xs shadow-lg">
+                <span class="text-base">🧠</span>
+                <span>Intellect: <strong>High IQ Mind</strong></span>
+              </div>
+              <div class="glass-panel-subtle px-4 py-2 rounded-2xl text-slate-300 text-xs font-mono">
+                🎵 12 Yrs Music
+              </div>
+              <div class="glass-panel-subtle px-4 py-2 rounded-2xl text-slate-300 text-xs font-mono">
+                ⚽ Zonals Athlete
+              </div>
+              <div class="glass-panel-subtle px-4 py-2 rounded-2xl text-slate-300 text-xs font-mono">
+                🚀 AI Power-User
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-4 flex justify-center">
+            <div class="w-48 h-48 rounded-full glass-icon-box flex flex-col items-center justify-center text-center p-4 border-2 border-purple-400/40 relative group">
+              <span class="text-4xl mb-2 group-hover:scale-110 transition-transform">⚡</span>
+              <span class="text-xs font-bold text-white">Snehashis Samanta</span>
+              <span class="text-[10px] text-purple-300 font-mono mt-1">Multi-faceted Visionary</span>
+              <div class="absolute inset-0 rounded-full border border-pink-400/20 animate-spin-slow pointer-events-none"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Contact Modal Component (Glassmorphism) -->
+  <div id="contactModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+    <div class="glass-panel max-w-md w-full p-6 sm:p-8 rounded-3xl border border-white/20 shadow-2xl relative transform scale-95 transition-transform duration-300" id="modalContainer">
+      <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white glass-icon-box w-8 h-8 rounded-full flex items-center justify-center">
+        ✕
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 rounded-2xl glass-icon-box flex items-center justify-center text-purple-300 text-xl font-bold">
+          ✉️
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white">Connect With Snehashis</h3>
+          <p class="text-xs text-slate-400">Music, AI Collaborations & Inquiries</p>
+        </div>
+      </div>
+
+      <div class="space-y-4 my-6">
+        <div class="glass-panel-subtle p-3.5 rounded-xl flex items-center justify-between border border-white/10">
+          <div>
+            <span class="text-[10px] text-slate-400 uppercase font-mono block">Direct Email</span>
+            <span id="emailValue" class="text-xs font-mono text-purple-300 font-semibold">N.A.</span>
+          </div>
+          <button onclick="showToast('Email is currently listed as N.A.')" class="glass-icon-box px-3 py-1.5 rounded-lg text-xs font-mono text-slate-200 hover:text-white">
+            Info
+          </button>
+        </div>
+
+        <div class="glass-panel-subtle p-3.5 rounded-xl flex items-center justify-between border border-white/10">
+          <div>
+            <span class="text-[10px] text-slate-400 uppercase font-mono block">Socials & Collabs</span>
+            <span class="text-xs font-mono text-cyan-300 font-semibold">@shis_reverb</span>
+          </div>
+          <button onclick="copyToClipboard('@shis_reverb', 'Handle @shis_reverb copied!')" class="glass-icon-box px-3 py-1.5 rounded-lg text-xs font-mono text-slate-200 hover:text-white">
+            Copy
+          </button>
+        </div>
+      </div>
+
+      <button onclick="closeModal()" class="w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold transition shadow-lg font-mono">
+        Close Window
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Box -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 glass-panel px-4 py-3 rounded-2xl border border-purple-500/40 text-xs font-mono text-purple-200 shadow-2xl flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+    <span id="toastMsg">Notification message</span>
+  </div>
+
+  <!-- Page Footer -->
+  <footer class="relative z-10 border-t border-white/10 py-10 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+        <span>© 2026 Snehashis Samanta. Built with Glassmorphic Precision.</span>
+      </div>
+      <div class="flex items-center gap-4 font-mono">
+        <a href="#hero" class="hover:text-white transition">Top ↑</a>
+        <a href="#music" class="hover:text-white transition">Music</a>
+        <a href="#tech" class="hover:text-white transition">Code</a>
+        <a href="#sports" class="hover:text-white transition">Sports</a>
+        <a href="#academics" class="hover:text-white transition">JEE</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Audio Context Initialization */
+    let audioCtx = null;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (AudioContextClass) {
+          audioCtx = new AudioContextClass();
+        }
+      }
+      if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    /* Play Synthesizer Key Note */
+    function playSynthNote(freq, noteName) {
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        const typeSelect = document.getElementById('synthWaveform');
+        const selectedType = typeSelect ? typeSelect.value : 'triangle';
+
+        osc.type = selectedType;
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+
+        // Glass bell envelope
+        gain.gain.setValueAtTime(0.001, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.35, ctx.currentTime + 0.04);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 1.2);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start();
+        osc.stop(ctx.currentTime + 1.25);
+
+        // Visual feedback
+        const noteDisplay = document.getElementById('activeNoteDisplay');
+        if (noteDisplay) {
+          noteDisplay.textContent = `Playing Note: ${noteName} (${freq.toFixed(1)} Hz)`;
+          noteDisplay.classList.add('text-cyan-300');
+        }
+      } catch (e) {
+        console.error('Audio synthesizer error:', e);
+      }
+    }
+
+    /* Play Guitar Chord Emulation */
+    function playGuitarChord(chordName) {
+      const chords = {
+        'C': [261.63, 329.63, 392.00, 523.25],
+        'G': [196.00, 246.94, 293.66, 392.00],
+        'Am': [220.00, 261.63, 329.63, 440.00],
+        'F': [174.61, 220.00, 261.63, 349.23]
+      };
+
+      const notes = chords[chordName] || [261.63, 329.63, 392.00];
+      const ctx = getAudioContext();
+      if (!ctx) return;
+
+      notes.forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, ctx.currentTime + (idx * 0.035));
+
+        gain.gain.setValueAtTime(0.001, ctx.currentTime + (idx * 0.035));
+        gain.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + (idx * 0.035) + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + (idx * 0.035) + 1.8);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(ctx.currentTime + (idx * 0.035));
+        osc.stop(ctx.currentTime + (idx * 0.035) + 1.85);
+      });
+
+      showToast(`Strumming ${chordName} Chord • 11y Guitar Precision`);
+    }
+
+    /* Interactive AI Query Simulation */
+    function runAiSimulation() {
+      const input = document.getElementById('aiQueryInput');
+      const output = document.getElementById('aiConsoleOutput');
+      const query = input ? input.value.trim() : '';
+
+      if (!query) return;
+
+      output.innerHTML = `<span class="text-purple-400 animate-pulse">// Processing detailed prompt token stream...</span>`;
+
+      setTimeout(() => {
+        output.innerHTML = `
+          <div class="space-y-1">
+            <span class="text-cyan-400 font-bold">// AI Detailed Output:</span>
+            <p class="text-slate-200">"Analyzing: <span class="text-purple-300">${query}</span>"</p>
+            <p class="text-emerald-400 mt-1">✓ Solution Synthesis: Integrated multi-step breakdown linking Snehashis's core disciplines: Music Acoustic Physics + Algorithmic App Structures.</p>
+          </div>
+        `;
+      }, 700);
+    }
+
+    /* JEE Study Sprint Timer */
+    let timerInterval = null;
+    let timerSeconds = 25 * 60;
+    let isTimerRunning = false;
+
+    function formatTime(secs) {
+      const m = Math.floor(secs / 60);
+      const s = secs % 60;
+      return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+    }
+
+    function toggleStudyTimer() {
+      const btn = document.getElementById('startTimerBtn');
+      if (isTimerRunning) {
+        clearInterval(timerInterval);
+        isTimerRunning = false;
+        if (btn) btn.textContent = 'Resume Sprint';
+        showToast('Study Sprint Paused');
+      } else {
+        isTimerRunning = true;
+        if (btn) btn.textContent = 'Pause Sprint';
+        showToast('JEE Deep Work Session Started!');
+        
+        timerInterval = setInterval(() => {
+          if (timerSeconds > 0) {
+            timerSeconds--;
+            document.getElementById('timerDisplay').textContent = formatTime(timerSeconds);
+          } else {
+            clearInterval(timerInterval);
+            isTimerRunning = false;
+            if (btn) btn.textContent = 'Start Sprint';
+            showToast('Sprint Complete! Outstanding problem solving.');
+            playSynthNote(523.25, 'C5');
+          }
+        }, 1000);
+      }
+    }
+
+    function resetStudyTimer() {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      timerSeconds = 25 * 60;
+      document.getElementById('timerDisplay').textContent = formatTime(timerSeconds);
+      const btn = document.getElementById('startTimerBtn');
+      if (btn) btn.textContent = 'Start Sprint';
+      showToast('Timer Reset to 25 mins');
+    }
+
+    /* Clipboard Copy Utility */
+    function copyToClipboard(text, successMsg) {
+      try {
+        const tempInput = document.createElement('input');
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        showToast(successMsg || 'Copied to clipboard!');
+      } catch (err) {
+        showToast('Action logged!');
+      }
+    }
+
+    /* Toast Notification Trigger */
+    let toastTimeout = null;
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      if (!toast || !toastMsg) return;
+
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2600);
+    }
+
+    /* Contact Modal Controls */
+    function openModal() {
+      const modal = document.getElementById('contactModal');
+      const container = document.getElementById('modalContainer');
+      if (modal && container) {
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+          modal.classList.remove('opacity-0');
+          container.classList.remove('scale-95');
+          container.classList.add('scale-100');
+        }, 10);
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('contactModal');
+      const container = document.getElementById('modalContainer');
+      if (modal && container) {
+        modal.classList.add('opacity-0');
+        container.classList.remove('scale-100');
+        container.classList.add('scale-95');
+        setTimeout(() => {
+          modal.classList.add('hidden');
+        }, 300);
+      }
+    }
+
+    // Synth chime header button listener
+    document.getElementById('synthChimeBtn')?.addEventListener('click', () => {
+      playGuitarChord('C');
+    });
+
+    // Close modal on escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    /* ==========================================================================
+       INTERACTIVE FOOTBALL ARENA SIMULATOR (CANVAS + WEB AUDIO)
+       ========================================================================== */
+    const fbCanvas = document.getElementById('footballCanvas');
+    const fbCtx = fbCanvas ? fbCanvas.getContext('2d') : null;
+
+    let fbScore = 0;
+    let fbAttempts = 0;
+    let fbStreak = 0;
+
+    // Ball & Physics State
+    let ball = {
+      x: 0,
+      y: 0,
+      radius: 18,
+      startX: 0,
+      startY: 0,
+      vx: 0,
+      vy: 0,
+      targetX: 0,
+      targetY: 0,
+      curve: 0,
+      scale: 1,
+      inFlight: false,
+      settled: false,
+      rotation: 0
+    };
+
+    // Goalkeeper State
+    let keeper = {
+      x: 0,
+      y: 0,
+      targetX: 0,
+      targetY: 0,
+      width: 44,
+      height: 72,
+      diving: false,
+      diveProgress: 0,
+      diveDirection: 0, // -1 left, 0 center, 1 right
+      baseX: 0,
+      baseY: 0,
+      swayOffset: 0
+    };
+
+    // Drag & Aim interaction
+    let isAiming = false;
+    let aimStart = { x: 0, y: 0 };
+    let aimCurrent = { x: 0, y: 0 };
+
+    // Goal Post Dimensions
+    let goal = {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0,
+      topBar: 0,
+      leftPost: 0,
+      rightPost: 0
+    };
+
+    // Particle bursts for goals
+    let particles = [];
+
+    function playFootballSound(type) {
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+
+        if (type === 'kick') {
+          // Deep punchy ball impact thump
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(140, ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(32, ctx.currentTime + 0.12);
+
+          gain.gain.setValueAtTime(0.45, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.14);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.15);
+        } else if (type === 'goal') {
+          // Triumphant rising major arpeggio
+          const notes = [440, 554.37, 659.25, 880];
+          notes.forEach((freq, idx) => {
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.08);
+
+            gain.gain.setValueAtTime(0.001, ctx.currentTime + idx * 0.08);
+            gain.gain.exponentialRampToValueAtTime(0.22, ctx.currentTime + idx * 0.08 + 0.03);
+            gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + idx * 0.08 + 0.6);
+
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.start(ctx.currentTime + idx * 0.08);
+            osc.stop(ctx.currentTime + idx * 0.08 + 0.65);
+          });
+        } else if (type === 'woodwork') {
+          // High metal crossbar vibration
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(940, ctx.currentTime);
+          gain.gain.setValueAtTime(0.35, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.7);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.75);
+        } else if (type === 'save') {
+          // Keeper glove palm block thud
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'square';
+          osc.frequency.setValueAtTime(85, ctx.currentTime);
+          gain.gain.setValueAtTime(0.25, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.1);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.12);
+        }
+      } catch (err) {
+        console.error('Audio effect error:', err);
+      }
+    }
+
+    function resizeFootballCanvas() {
+      if (!fbCanvas) return;
+      const rect = fbCanvas.parentElement.getBoundingClientRect();
+      fbCanvas.width = rect.width;
+      fbCanvas.height = Math.min(380, Math.max(300, rect.width * 0.5));
+
+      const w = fbCanvas.width;
+      const h = fbCanvas.height;
+
+      // Goal setup
+      goal.width = Math.min(420, w * 0.62);
+      goal.height = Math.min(160, h * 0.46);
+      goal.x = (w - goal.width) / 2;
+      goal.y = 52;
+      goal.leftPost = goal.x;
+      goal.rightPost = goal.x + goal.width;
+      goal.topBar = goal.y;
+
+      // Reset Ball coordinates
+      ball.startX = w / 2;
+      ball.startY = h - 50;
+      if (!ball.inFlight) {
+        ball.x = ball.startX;
+        ball.y = ball.startY;
+        ball.scale = 1;
+      }
+
+      // Reset Keeper coordinates
+      keeper.baseX = w / 2;
+      keeper.baseY = goal.y + goal.height - 18;
+      if (!keeper.diving) {
+        keeper.x = keeper.baseX;
+        keeper.y = keeper.baseY;
+      }
+    }
+
+    function drawPitch() {
+      if (!fbCtx) return;
+      const w = fbCanvas.width;
+      const h = fbCanvas.height;
+
+      // Clear & Night Turf Gradient
+      fbCtx.clearRect(0, 0, w, h);
+
+      const turfGrad = fbCtx.createLinearGradient(0, 0, 0, h);
+      turfGrad.addColorStop(0, '#061b17');
+      turfGrad.addColorStop(0.5, '#0b3127');
+      turfGrad.addColorStop(1, '#08251e');
+      fbCtx.fillStyle = turfGrad;
+      fbCtx.fillRect(0, 0, w, h);
+
+      // Pitch mowing strips
+      for (let i = 0; i < 6; i++) {
+        const stripY = (h / 6) * i;
+        fbCtx.fillStyle = i % 2 === 0 ? 'rgba(255,255,255,0.015)' : 'rgba(0,0,0,0.08)';
+        fbCtx.fillRect(0, stripY, w, h / 6);
+      }
+
+      // Penalty box lines
+      fbCtx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+      fbCtx.lineWidth = 2;
+
+      // Outer goal line
+      fbCtx.beginPath();
+      fbCtx.moveTo(w * 0.1, goal.y + goal.height + 30);
+      fbCtx.lineTo(w * 0.9, goal.y + goal.height + 30);
+      fbCtx.stroke();
+
+      // Penalty spot ring
+      fbCtx.beginPath();
+      fbCtx.arc(ball.startX, ball.startY, 3, 0, Math.PI * 2);
+      fbCtx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+      fbCtx.fill();
+
+      // Goal Net Perspective Grid
+      fbCtx.fillStyle = 'rgba(10, 25, 30, 0.75)';
+      fbCtx.fillRect(goal.x, goal.y, goal.width, goal.height);
+
+      fbCtx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+      fbCtx.lineWidth = 1;
+      const netSpacing = 14;
+      for (let nx = goal.x; nx <= goal.rightPost; nx += netSpacing) {
+        fbCtx.beginPath();
+        fbCtx.moveTo(nx, goal.topBar);
+        fbCtx.lineTo(nx, goal.topBar + goal.height);
+        fbCtx.stroke();
+      }
+      for (let ny = goal.topBar; ny <= goal.topBar + goal.height; ny += netSpacing) {
+        fbCtx.beginPath();
+        fbCtx.moveTo(goal.leftPost, ny);
+        fbCtx.lineTo(goal.rightPost, ny);
+        fbCtx.stroke();
+      }
+
+      // Goal Frame (White Glowing Posts)
+      fbCtx.strokeStyle = '#ffffff';
+      fbCtx.shadowColor = '#06b6d4';
+      fbCtx.shadowBlur = 10;
+      fbCtx.lineWidth = 5;
+      fbCtx.beginPath();
+      fbCtx.moveTo(goal.leftPost, goal.y + goal.height);
+      fbCtx.lineTo(goal.leftPost, goal.topBar);
+      fbCtx.lineTo(goal.rightPost, goal.topBar);
+      fbCtx.lineTo(goal.rightPost, goal.y + goal.height);
+      fbCtx.stroke();
+      fbCtx.shadowBlur = 0; // reset
+    }
+
+    function drawGoalkeeper() {
+      if (!fbCtx) return;
+
+      // Keeper idle sway when not diving
+      if (!keeper.diving) {
+        keeper.swayOffset = Math.sin(Date.now() * 0.005) * 16;
+        keeper.x = keeper.baseX + keeper.swayOffset;
+      }
+
+      fbCtx.save();
+      fbCtx.translate(keeper.x, keeper.y);
+
+      // Tilt body during dive
+      if (keeper.diving) {
+        const tiltAngle = keeper.diveDirection * 0.55 * keeper.diveProgress;
+        fbCtx.rotate(tiltAngle);
+      }
+
+      // Shadow
+      fbCtx.fillStyle = 'rgba(0, 0, 0, 0.45)';
+      fbCtx.beginPath();
+      fbCtx.ellipse(0, 0, 20, 6, 0, 0, Math.PI * 2);
+      fbCtx.fill();
+
+      // Keeper Jersey (Fluorescent Yellow/Green)
+      fbCtx.fillStyle = '#eab308';
+      fbCtx.shadowColor = 'rgba(234, 179, 8, 0.5)';
+      fbCtx.shadowBlur = 8;
+      fbCtx.beginPath();
+      fbCtx.roundRect(-14, -46, 28, 36, 6);
+      fbCtx.fill();
+      fbCtx.shadowBlur = 0;
+
+      // Keeper Shorts
+      fbCtx.fillStyle = '#0f172a';
+      fbCtx.fillRect(-12, -14, 24, 14);
+
+      // Keeper Head
+      fbCtx.fillStyle = '#fbcfe8';
+      fbCtx.beginPath();
+      fbCtx.arc(0, -54, 8, 0, Math.PI * 2);
+      fbCtx.fill();
+
+      // Gloves (Neon Orange)
+      fbCtx.fillStyle = '#f97316';
+      // Left Glove
+      fbCtx.beginPath();
+      fbCtx.arc(-18, keeper.diving ? -50 : -32, 6, 0, Math.PI * 2);
+      fbCtx.fill();
+      // Right Glove
+      fbCtx.beginPath();
+      fbCtx.arc(18, keeper.diving ? -50 : -32, 6, 0, Math.PI * 2);
+      fbCtx.fill();
+
+      fbCtx.restore();
+    }
+
+    function drawBall() {
+      if (!fbCtx) return;
+
+      // Draw Aim Vector when dragging
+      if (isAiming && !ball.inFlight) {
+        const dx = ball.startX - aimCurrent.x;
+        const dy = ball.startY - aimCurrent.y;
+        const dist = Math.hypot(dx, dy);
+
+        if (dist > 10) {
+          fbCtx.save();
+          fbCtx.strokeStyle = 'rgba(6, 182, 212, 0.85)';
+          fbCtx.setLineDash([6, 4]);
+          fbCtx.lineWidth = 3;
+          fbCtx.beginPath();
+          fbCtx.moveTo(ball.startX, ball.startY);
+
+          // Projected aim arc towards goal
+          const aimEndX = ball.startX + dx * 2.2;
+          const aimEndY = Math.max(goal.topBar - 20, ball.startY - dy * 2.2);
+          fbCtx.quadraticCurveTo((ball.startX + aimEndX) / 2, (ball.startY + aimEndY) / 2 - 20, aimEndX, aimEndY);
+          fbCtx.stroke();
+
+          // Target reticle
+          fbCtx.setLineDash([]);
+          fbCtx.strokeStyle = '#ec4899';
+          fbCtx.beginPath();
+          fbCtx.arc(aimEndX, aimEndY, 10, 0, Math.PI * 2);
+          fbCtx.stroke();
+          fbCtx.restore();
+        }
+      }
+
+      // Ball Shadow
+      fbCtx.save();
+      const shadowRadius = (ball.radius * 0.9) * ball.scale;
+      fbCtx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+      fbCtx.beginPath();
+      fbCtx.ellipse(ball.x, ball.y + (ball.radius * 0.8) * ball.scale, shadowRadius, shadowRadius * 0.35, 0, 0, Math.PI * 2);
+      fbCtx.fill();
+
+      // Ball Outer Circle
+      const r = ball.radius * ball.scale;
+      fbCtx.translate(ball.x, ball.y);
+      fbCtx.rotate(ball.rotation);
+
+      fbCtx.fillStyle = '#ffffff';
+      fbCtx.shadowColor = 'rgba(255, 255, 255, 0.4)';
+      fbCtx.shadowBlur = 6;
+      fbCtx.beginPath();
+      fbCtx.arc(0, 0, r, 0, Math.PI * 2);
+      fbCtx.fill();
+      fbCtx.shadowBlur = 0;
+
+      // Ball Classic Black Pentagonal Patches
+      fbCtx.fillStyle = '#1e293b';
+      fbCtx.beginPath();
+      fbCtx.arc(0, 0, r * 0.38, 0, Math.PI * 2);
+      fbCtx.fill();
+
+      for (let i = 0; i < 5; i++) {
+        const angle = (i * 2 * Math.PI) / 5;
+        const px = Math.cos(angle) * (r * 0.72);
+        const py = Math.sin(angle) * (r * 0.72);
+        fbCtx.beginPath();
+        fbCtx.arc(px, py, r * 0.22, 0, Math.PI * 2);
+        fbCtx.fill();
+      }
+
+      fbCtx.restore();
+    }
+
+    function createCelebrationParticles(x, y) {
+      particles = [];
+      const colors = ['#10b981', '#06b6d4', '#ec4899', '#f59e0b', '#ffffff'];
+      for (let i = 0; i < 35; i++) {
+        particles.push({
+          x: x,
+          y: y,
+          vx: (Math.random() - 0.5) * 8,
+          vy: (Math.random() - 0.9) * 7,
+          size: Math.random() * 5 + 2,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          life: 1
+        });
+      }
+    }
+
+    function updateParticles() {
+      if (!fbCtx) return;
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.2; // gravity
+        p.life -= 0.025;
+
+        if (p.life > 0) {
+          fbCtx.fillStyle = p.color;
+          fbCtx.globalAlpha = p.life;
+          fbCtx.fillRect(p.x, p.y, p.size, p.size);
+          fbCtx.globalAlpha = 1;
+        } else {
+          particles.splice(i, 1);
+        }
+      }
+    }
+
+    function executeShot(targetX, targetY, speedKmh, curveFactor = 0, shotLabel = 'Strike') {
+      if (ball.inFlight) return;
+
+      ball.inFlight = true;
+      ball.settled = false;
+      ball.targetX = targetX;
+      ball.targetY = targetY;
+      ball.curve = curveFactor;
+      ball.rotation = 0;
+
+      fbAttempts++;
+      document.getElementById('fbSpeedDisplay').textContent = `${Math.round(speedKmh)} km/h`;
+
+      // Trigger kick sound
+      playFootballSound('kick');
+
+      // Goalkeeper AI prediction (dives with human reaction delay)
+      keeper.diving = true;
+      keeper.diveProgress = 0;
+
+      // Decide keeper dive: If shot is in the extreme corners with high speed, keeper can be beaten!
+      const goalCenterX = goal.x + goal.width / 2;
+      const shotOffsetFromCenter = targetX - goalCenterX;
+
+      // Keeper dive target
+      keeper.diveDirection = shotOffsetFromCenter > 0 ? 1 : -1;
+      // High speed shots to upper 90 leave keeper with slightly less reach
+      const keeperAccuracy = speedKmh > 105 ? 0.72 : 0.88;
+      keeper.targetX = keeper.baseX + (shotOffsetFromCenter * keeperAccuracy);
+      keeper.targetY = Math.max(goal.topBar + 25, Math.min(goal.y + goal.height - 10, targetY));
+
+      // Animation parameters
+      const durationFrames = Math.max(24, Math.floor(65 - (speedKmh * 0.35)));
+      let currentFrame = 0;
+
+      const startX = ball.startX;
+      const startY = ball.startY;
+
+      const statusEl = document.getElementById('fbTargetStatus');
+      if (statusEl) statusEl.textContent = `In Flight: ${shotLabel}!`;
+
+      const shotInterval = setInterval(() => {
+        currentFrame++;
+        const progress = currentFrame / durationFrames;
+
+        // Quadratic bezier arc for ball flight + curve
+        const curveOffset = Math.sin(progress * Math.PI) * (ball.curve * 60);
+        ball.x = startX + (targetX - startX) * progress + curveOffset;
+        ball.y = startY + (targetY - startY) * progress;
+
+        // Ball scales down as it moves deep into the pitch (3D perspective)
+        ball.scale = 1 - (progress * 0.48);
+        ball.rotation += 0.25;
+
+        // Keeper dive interpolation
+        keeper.diveProgress = Math.min(1, progress * 1.3);
+        keeper.x = keeper.baseX + (keeper.targetX - keeper.baseX) * keeper.diveProgress;
+        keeper.y = keeper.baseY + (keeper.targetY - keeper.baseY) * keeper.diveProgress;
+
+        if (currentFrame >= durationFrames) {
+          clearInterval(shotInterval);
+          evaluateOutcome(targetX, targetY, speedKmh, shotLabel);
+        }
+      }, 16);
+    }
+
+    function evaluateOutcome(finalX, finalY, speedKmh, shotLabel) {
+      ball.inFlight = false;
+      ball.settled = true;
+
+      const inGoalX = finalX >= goal.leftPost && finalX <= goal.rightPost;
+      const inGoalY = finalY >= goal.topBar && finalY <= (goal.topBar + goal.height);
+
+      const distToKeeper = Math.hypot(finalX - keeper.x, finalY - keeper.y);
+      const isTopCorner = inGoalY <= (goal.topBar + 40) && (finalX <= (goal.leftPost + 45) || finalX >= (goal.rightPost - 45));
+
+      const isWoodwork = (Math.abs(finalX - goal.leftPost) < 12 || Math.abs(finalX - goal.rightPost) < 12) && inGoalY;
+
+      if (isWoodwork) {
+        // Hit the crossbar/post
+        playFootballSound('woodwork');
+        showMatchdayBanner('💥', 'WOODWORK! Hit the Post!');
+        fbStreak = 0;
+      } else if (inGoalX && inGoalY) {
+        if (distToKeeper < 34 && !isTopCorner) {
+          // Goalkeeper saved it!
+          playFootballSound('save');
+          showMatchdayBanner('🧤', 'DENIED! Keeper saves!');
+          fbStreak = 0;
+        } else {
+          // GOAL!
+          fbScore++;
+          fbStreak++;
+          playFootballSound('goal');
+          createCelebrationParticles(finalX, finalY);
+
+          if (isTopCorner) {
+            showMatchdayBanner('🎯', 'TOP BINS ROCKET! Perfection!');
+            showToast('⚽ Top Bins Masterclass! Unstoppable finish.');
+          } else {
+            showMatchdayBanner('⚽', `GOAL! Crisp ${shotLabel}!`);
+            showToast('⚽ GOAL Scored! Snehashis strikes cleanly.');
+          }
+        }
+      } else {
+        // Off target
+        showMatchdayBanner('💨', 'WIDE! Off the mark!');
+        fbStreak = 0;
+      }
+
+      // Update Score Display
+      document.getElementById('fbScoreDisplay').textContent = `${fbScore} / ${fbAttempts}`;
+      document.getElementById('fbStreakDisplay').textContent = `🔥 ${fbStreak}`;
+
+      // Reset for next shot after brief pause
+      setTimeout(() => {
+        resetBallAndKeeper();
+      }, 1400);
+    }
+
+    function resetBallAndKeeper() {
+      ball.inFlight = false;
+      ball.settled = false;
+      ball.x = ball.startX;
+      ball.y = ball.startY;
+      ball.scale = 1;
+      ball.rotation = 0;
+
+      keeper.diving = false;
+      keeper.diveProgress = 0;
+      keeper.x = keeper.baseX;
+      keeper.y = keeper.baseY;
+
+      const statusEl = document.getElementById('fbTargetStatus');
+      if (statusEl) statusEl.textContent = 'Keeper Ready • Your Turn to Shoot';
+    }
+
+    function showMatchdayBanner(emoji, text) {
+      const banner = document.getElementById('fbFeedbackOverlay');
+      const emojiEl = document.getElementById('fbFeedbackEmoji');
+      const textEl = document.getElementById('fbFeedbackText');
+      if (!banner || !emojiEl || !textEl) return;
+
+      emojiEl.textContent = emoji;
+      textEl.textContent = text;
+      banner.classList.remove('opacity-0', '-translate-y-3');
+      banner.classList.add('opacity-100', 'translate-y-0');
+
+      setTimeout(() => {
+        banner.classList.remove('opacity-100', 'translate-y-0');
+        banner.classList.add('opacity-0', '-translate-y-3');
+      }, 1600);
+    }
+
+    function resetFootballGame() {
+      fbScore = 0;
+      fbAttempts = 0;
+      fbStreak = 0;
+      document.getElementById('fbScoreDisplay').textContent = '0 / 0';
+      document.getElementById('fbSpeedDisplay').textContent = '0 km/h';
+      document.getElementById('fbStreakDisplay').textContent = '🔥 0';
+      resetBallAndKeeper();
+      showToast('Matchday Simulator Reset!');
+    }
+
+    function triggerSkillShot(type) {
+      if (ball.inFlight) return;
+      getAudioContext(); // Ensure AudioContext is active
+
+      if (type === 'topBins') {
+        // Rocket into top-left or top-right 90
+        const isRight = Math.random() > 0.5;
+        const targetX = isRight ? goal.rightPost - 28 : goal.leftPost + 28;
+        const targetY = goal.topBar + 22;
+        executeShot(targetX, targetY, 114, isRight ? -0.3 : 0.3, 'Top Bins Rocket');
+      } else if (type === 'curve') {
+        // Curled trivela bending around keeper
+        const targetX = goal.leftPost + 45;
+        const targetY = goal.topBar + 40;
+        executeShot(targetX, targetY, 96, 0.75, 'Trivela Curve');
+      } else if (type === 'drill') {
+        // Low driven missile to bottom corner
+        const isRight = Math.random() > 0.5;
+        const targetX = isRight ? goal.rightPost - 22 : goal.leftPost + 22;
+        const targetY = goal.topBar + goal.height - 15;
+        executeShot(targetX, targetY, 118, 0, '110 km/h Low Drill');
+      } else if (type === 'panenka') {
+        // Delicate floating chip down the middle
+        const targetX = goal.x + goal.width / 2;
+        const targetY = goal.topBar + 45;
+        executeShot(targetX, targetY, 74, 0, 'Panenka Chip');
+      }
+    }
+
+    function getCanvasCoordinates(evt) {
+      const rect = fbCanvas.getBoundingClientRect();
+      const clientX = evt.touches ? evt.touches[0].clientX : evt.clientX;
+      const clientY = evt.touches ? evt.touches[0].clientY : evt.clientY;
+      return {
+        x: clientX - rect.left,
+        y: clientY - rect.top
+      };
+    }
+
+    if (fbCanvas) {
+      // Mouse down / Touch start on or near ball
+      const onAimStart = (e) => {
+        if (ball.inFlight) return;
+        const pos = getCanvasCoordinates(e);
+        const distToBall = Math.hypot(pos.x - ball.x, pos.y - ball.y);
+
+        if (distToBall < 55) {
+          isAiming = true;
+          aimStart = pos;
+          aimCurrent = pos;
+          getAudioContext();
+          if (e.cancelable) e.preventDefault();
+        }
+      };
+
+      const onAimMove = (e) => {
+        if (!isAiming) return;
+        aimCurrent = getCanvasCoordinates(e);
+        if (e.cancelable) e.preventDefault();
+      };
+
+      const onAimEnd = (e) => {
+        if (!isAiming) return;
+        isAiming = false;
+
+        const dx = ball.startX - aimCurrent.x;
+        const dy = ball.startY - aimCurrent.y;
+        const dragDist = Math.hypot(dx, dy);
+
+        if (dragDist > 20) {
+          // Calculate shot direction and velocity
+          const targetX = ball.startX + dx * 2.1;
+          const targetY = ball.startY - dy * 2.1;
+          const speed = Math.min(125, Math.max(65, dragDist * 1.15));
+          const curve = (aimCurrent.x - ball.startX) * 0.004;
+
+          executeShot(targetX, targetY, speed, curve, 'Manual Flick');
+        }
+      };
+
+      fbCanvas.addEventListener('mousedown', onAimStart);
+      window.addEventListener('mousemove', onAimMove);
+      window.addEventListener('mouseup', onAimEnd);
+
+      fbCanvas.addEventListener('touchstart', onAimStart, { passive: false });
+      window.addEventListener('touchmove', onAimMove, { passive: false });
+      window.addEventListener('touchend', onAimEnd);
+    }
+
+    function footballLoop() {
+      drawPitch();
+      drawGoalkeeper();
+      drawBall();
+      updateParticles();
+      requestAnimationFrame(footballLoop);
+    }
+
+    window.addEventListener('resize', () => {
+      resizeFootballCanvas();
+    });
+
+    // Start Arena initialization
+    setTimeout(() => {
+      resizeFootballCanvas();
+      footballLoop();
+    }, 100);
+  </script>
+</body>
+</html>
